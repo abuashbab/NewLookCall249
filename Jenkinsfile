@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('My Build') {
       steps {
         echo 'Building..'
         timestamps() {
@@ -12,13 +12,13 @@ pipeline {
       }
     }
 
-    stage('Test') {
+    stage('My Test') {
       steps {
         echo 'Testing..'
       }
     }
 
-    stage('Deploy') {
+    stage('My Deploy') {
       steps {
         echo 'Deploying....'
       }
