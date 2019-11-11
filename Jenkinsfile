@@ -1,21 +1,28 @@
 pipeline {
-    agent any
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        echo 'Building..'
+        timestamps() {
+          echo 'qwqw'
+          sleep 2
+        }
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+      }
     }
+
+    stage('Test') {
+      steps {
+        echo 'Testing..'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        echo 'Deploying....'
+      }
+    }
+
+  }
 }
